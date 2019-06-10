@@ -6,14 +6,12 @@ const errorMessage = 'Неверный пароль';
 const welcomeMessage = 'Добро пожаловать!';
 
 // eslint-disable-next-line prefer-const
-let input = prompt(inputMessage, 0);
+let input = prompt(inputMessage);
 if (input === null) {
   message = cancelMessage;
-  console.log(message);
 } else if (input === ADMIN_PASS) {
   message = welcomeMessage;
-  console.log(message);
 } else {
   message = errorMessage;
-  console.log(message);
 }
+console.log(message);
