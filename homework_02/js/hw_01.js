@@ -4,9 +4,9 @@ let input;
 
 do {
   input = prompt('Введите число: ');
+  if (input === null) break;
   numbers.push(+input);
-} while (input !== null);
-numbers.pop();
+} while (true);
 for (let i = 0; i < numbers.length; i += 1) {
   total += numbers[i];
 }
