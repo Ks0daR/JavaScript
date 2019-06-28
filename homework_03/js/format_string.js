@@ -8,11 +8,12 @@
     возвращает укороченную версию.
 */
 const formatString = function (str) {
-  let string = 0;
-  for (let i = 0; i < str.length; i += 1) {
-    if (i <= 40) return str;
-  }
-  console.log(string);
+  let newStr;
+  if (str.length > 40) {
+    newStr = str.slice(0, 40);
+    newStr += '...';
+  } else newStr = str;
+  return newStr;
 };
 // Вызовы функции для проверки
 console.log(formatString('Curabitur ligula sapien, tincidunt non.')); // вернется оригинальная строка
