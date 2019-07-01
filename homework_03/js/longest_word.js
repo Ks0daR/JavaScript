@@ -14,7 +14,6 @@ const findLongestWord = function (str) {
       longestWord = words[i];
     }
   }
-  console.log(longestWord);
   return longestWord;
 };
 // Вызовы функции для проверки
