@@ -4,13 +4,21 @@
 */
 
 // Вызовы функции для проверки
+// const countProps = function (obj) {
+//   let value = 0;
+//   const keys = Object.keys(obj);
+//   for (const key of keys) {
+//     value += 1;
+//   }
+//   return value;
+// };
+
 const countProps = function (obj) {
-  let value;
-  const keys = Object.key(obj);
-  for (const key of keys) {
+  let value = 0;
+  for (key in obj) {
     value += 1;
-    return value;
   }
+  return value;
 };
 console.log(countProps({})); // 0
 

@@ -21,9 +21,7 @@ const user = {
   premium: true,
 };
 
-user.mood = 'happy';
-user.hobby = 'javascript';
-user.premium = false;
+Object.assign(user, { mood: 'happy', hobby: 'javascript', premium: false });
 console.log(user);
 
 const users = Object.keys(user);
