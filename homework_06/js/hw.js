@@ -18,7 +18,7 @@ class Notepad {
 
   saveNote(note) {
     this._notes.push(note);
-    return this._notes;
+    return note;
   }
 
   deleteNote(id) {
