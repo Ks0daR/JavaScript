@@ -18,15 +18,13 @@ const guests = [
   { name: 'Ajax', inactiveDays: 32, isActive: false },
   { name: 'Chelsey', inactiveDays: 85, isActive: true },
 ];
-const setGuestState = (guests, period) => {
-  const userActivity = guests
-    .filter(user => user.inactiveDays > period)
-    .map(user => user.isActive === false);
-  return userActivity;
-};
+
+const usersActivity = guests.map(guest => guest.inactiveDays > 10);
+
+console.log(usersActivity);
 // Вызовы функции для проверки
-console.log(setGuestState(guests, 10)); // Объекты Mango, Ajax, Chelsey получат isActive false, а Poly наоборот true
+// console.log(setGuestState(guests, 10)); // Объекты Mango, Ajax, Chelsey получат isActive false, а Poly наоборот true
 
-console.log(setGuestState(guests, 20)); // Объекты Ajax, Chelsey получат isActive false, а Mango и Poly наоборот true
+// console.log(setGuestState(guests, 20)); // Объекты Ajax, Chelsey получат isActive false, а Mango и Poly наоборот true
 
-console.log(setGuestState(guests, 50)); // Объект Chelsey получит isActive false, а Mango, Poly и Ajax наоборот true
+// console.log(setGuestState(guests, 50)); // Объект Chelsey получит isActive false, а Mango, Poly и Ajax наоборот true

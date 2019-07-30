@@ -15,7 +15,7 @@ const guests = [
 ];
 
 const getPropValues = (arr, prop) => {
-  const findResult = arr.map(key => key.prop);
+  const findResult = arr.map(key => key[prop]);
   return findResult;
 };
 // Вызовы функции для проверки

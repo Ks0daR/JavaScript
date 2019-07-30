@@ -1,0 +1,15 @@
+{
+    "editor.fontFamily": "\"Fira Code\"",
+    "editor.fontLigatures": true,
+    "prettier.eslintIntegration": true,
+    "files.autoSave": "onWindowChange",
+    "eslint.enable": true,
+    "eslint.autoFixOnSave" : true,
+    "eslint.validate":[
+        "javascript"
+    ],
+    "files.eol": "\n",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+}
