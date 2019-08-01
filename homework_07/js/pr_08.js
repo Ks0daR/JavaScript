@@ -38,4 +38,3 @@ const orderC = {
 console.log(getTotal(products, orderA)); // 140
 console.log(getTotal(products, orderB)); // 120
 console.log(getTotal(products, orderC)); // 80
-

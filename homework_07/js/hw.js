@@ -132,9 +132,28 @@ const users = [
 // console.log(getUsersWithAge(users, 30, 40));
 // // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
-const getTotalBalance = (users) => {
-  const totalBalance = users.reduce((total, balance) => total += balance, 0);
-  return totalBalance;
+// const getTotalBalance = (users) => {
+//   const totalBalance = users.reduce((total, user) => total + user.balance, 0);
+//   return totalBalance;
+// };
+
+// console.log(getTotalBalance(users)); // 20916
+
+// const getUsersByFriend = (users, name) => {
+//   const userByFriend = users.filter(user => user.friends.includes(name)).map(user => user.name);
+//   return userByFriend;
+// };
+
+// console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+const getUniqueSkills = (users) => {
+  const uniqueSkills = users.reduce((total, user) => {
+    if (!hasOwnProperty(total)) total.push(...user.skills);
+    return total;
+  }, []);
+  return uniqueSkills;
 };
 
-console.log(getTotalBalance(users)); // 20916
+console.log(getUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]

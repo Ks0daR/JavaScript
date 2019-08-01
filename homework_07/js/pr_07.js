@@ -5,10 +5,11 @@
  * Используй метод reduce.
  */
 const getTotal = (products) => {
-  // console.log(products);
-  // const keys = Object.values(products);
-  // console.log(keys);
-  const totalPrice = products.reduce((sum) => { sum += value; }, 0);
+  const price = Object.values(products);
+  const totalPrice = price.reduce((sum, value) => {
+    sum += value;
+    return sum;
+  }, 0);
   return totalPrice;
 };
 console.log(getTotal({ apples: 25, chicken: 60, milk: 15 })); // 100
