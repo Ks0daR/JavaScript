@@ -151,7 +151,7 @@ const getUniqueSkills = (users) => {
   const skills = users.reduce((total, user) => {
     total.push(...user.skills);
     return total;
-  }, []).sort((a, b) => a.localeCompare(b, 'uk')).filter(skill => !(skill === skill - 1));
+  }, []).sort((a, b) => a.localeCompare(b, 'uk')).filter(skill => (skill === skill - 1));
   return skills;
 };
 
