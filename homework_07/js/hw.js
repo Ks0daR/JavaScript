@@ -148,11 +148,11 @@ const users = [
 // console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
 const getUniqueSkills = (users) => {
-  const uniqueSkills = users.reduce((total, user) => {
-    if (!hasOwnProperty(total)) total.push(...user.skills);
+  const skills = users.reduce((total, user) => {
+    total.push(...user.skills);
     return total;
-  }, []);
-  return uniqueSkills;
+  }, []).sort((a, b) => a.localeCompare(b, 'uk')).filter(skill => !(skill === skill - 1));
+  return skills;
 };
 
 console.log(getUniqueSkills(users));
